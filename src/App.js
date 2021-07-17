@@ -1,9 +1,10 @@
-import logo from './logo.svg';
+
 import './App.css';
-import { Fragment } from 'react';
-import Glass from './Glass-component/Glass.js';
+import Glass from './Glass-component/Glass';
+
 
 function App() {
+
   return (
     <div>
       <Glass/>
