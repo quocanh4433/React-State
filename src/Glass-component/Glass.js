@@ -67,15 +67,36 @@ export default class Glass extends Component {
         }
     ]
 
+    state = {
+        srcImg : "./glassesImage/v1.png",
+        nameGlass : "GUCCI G8850U",
+        descGlass : "Light pink square lenses define these sunglasses, ending with amother of pearl effect tip. "
+        
+    }
+
     renderTable = () => {
         let contentTable = this.productList.map((product, index) => {
-            return  <div className="glass-item">
-                <div  className="glass-img">
-                    <img src={product.url} />
+            return  <div className="glass-item" key={product.id}>
+                <div className="glass-img" onClick={() => {
+                    this.handleChagneGlass(
+                        `${product.url}`,
+                        `${product.name}`,
+                        `${product.desc}`,
+                    )
+                }}>
+                    <img src={product.url} alt={product.name}/>
                 </div>
             </div>
         })
         return contentTable
+    }
+
+    handleChagneGlass = (model,name,desc) => {
+        this.setState({
+            srcImg : model,
+            nameGlass: name,
+            desGlass: desc
+        })
     }
 
     render() {
@@ -85,23 +106,19 @@ export default class Glass extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-6">
-                        <img src="/glassesImage/model.jpg" />
-                        <img className="glass-demo" src="/glassesImage/v3.png"/>
+                        <img src="/glassesImage/model.jpg" alt="model"/>
+                        <img className="glass-demo" src={this.state.srcImg} alt="model"/>
                         <div className="glass-info">
-                            <h4>Glass name</h4>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus labore rem itaque sit et, vitae quod nesciunt</p>
+                            <h4>{this.state.nameGlass}</h4>
+                            <p>{this.state.descGlass}</p>
                         </div>
                         </div>
                         <div>
-                        <img src="/glassesImage/model.jpg"></img>
+                        <img src="/glassesImage/model.jpg" alt="model"></img>
                         </div>
                     </div>
                     <div className="glass-model">
                         {this.renderTable()}
-                        {/* <div className="glass-item">
-                            <img src="https://picsum.photos/seed/picsum/200/300" />
-                        </div> */}
-                       
                     </div>
                 </div>
             </section>

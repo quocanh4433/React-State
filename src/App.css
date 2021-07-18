@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -12,6 +15,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    overflow: auto;
+    padding-bottom: 50px;
 }
 
 h1 {
@@ -35,9 +40,10 @@ h1 {
 
 .glass-demo {
     position: absolute;
-    left: 23%;
+    left: 22.5%;
     top: 25%;
     width: 55%;
+    opacity: 0.7;
 }
 
 .glass-info {
@@ -46,7 +52,7 @@ h1 {
     left: 0;
     right: 0;
     padding: 10px 10px 20px 10px;
-    background-color: rgba(248, 144, 84, 0.8);
+    background-color: rgba(248, 144, 84, 0.7);
 }
 
 h4 {
@@ -67,10 +73,11 @@ p {
 }
 
 .glass-model {
-    background-color: rgb(243, 157, 157);
-    padding: 30px 40px;
+    border-radius: 20px;
+    background-color:#fff;
+    padding: 50px 40px;
     width: 100%;
-    min-height: 250px;
+    min-height: 310px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
