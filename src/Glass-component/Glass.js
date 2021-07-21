@@ -98,7 +98,6 @@ export default class Glass extends Component {
             desGlass: desc
         })
     }
-
     render() {
         return (
             <section className="app" style={{ backgroundImage: "url(/glassesImage/background.jpg)"}}>
@@ -106,15 +105,15 @@ export default class Glass extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-6">
-                        <img src="/glassesImage/model.jpg" alt="model"/>
-                        <img className="glass-demo" src={this.state.srcImg} alt="model"/>
-                        <div className="glass-info">
-                            <h4>{this.state.nameGlass}</h4>
-                            <p>{this.state.descGlass}</p>
-                        </div>
+                            <img src="/glassesImage/model.jpg" alt="model"/>
+                            <img className="glass-demo" src={this.state.srcImg} alt="model"/>
+                            <div className="glass-info">
+                                <h4>{this.state.nameGlass}</h4>
+                                <p>{this.state.descGlass}</p>
+                            </div>
                         </div>
                         <div>
-                        <img src="/glassesImage/model.jpg" alt="model"></img>
+                            <img src="/glassesImage/model.jpg" alt="model"></img>
                         </div>
                     </div>
                     <div className="glass-model">
